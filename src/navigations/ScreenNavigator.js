@@ -5,6 +5,7 @@ const Stack = createStackNavigator();
 
 import {Signin} from '../screens/welcome';
 import {WelcomeScreen} from '../screens/welcome';
+import {Signup} from '../screens/welcome';
 
 export const ScreenNavigator = () => {
   return (
@@ -13,6 +14,11 @@ export const ScreenNavigator = () => {
         <Stack.Screen
           name="WelcomeScreen"
           component={WelcomeScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Signup"
+          component={Signup}
           options={{headerShown: false}}
         />
         <Stack.Screen

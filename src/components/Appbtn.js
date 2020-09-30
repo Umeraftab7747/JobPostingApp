@@ -22,7 +22,7 @@ export class Appbtn extends Component {
 const styles = StyleSheet.create({
   BtnContainer: {
     width: w('35%'),
-    height: h('6.5%'),
+    height: h('6%'),
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: red,

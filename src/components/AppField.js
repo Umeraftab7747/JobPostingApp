@@ -28,7 +28,7 @@ export class AppField extends Component {
 const styles = StyleSheet.create({
   Container: {
     backgroundColor: red,
-    width: w('70%'),
+    width: w('85%'),
     height: h('6%'),
     margin: h('1%'),
     flexDirection: 'row',
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   TextInput: {
     backgroundColor: white,
-    width: w('60%'),
+    width: w('75%'),
     height: h('6%'),
     color: red,
     paddingLeft: h('1%'),

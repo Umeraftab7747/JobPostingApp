@@ -25,7 +25,12 @@ export class WelcomeScreen extends Component {
               }}
               title={'SignIn'}
             />
-            <Appbtn title={'SignUp'} />
+            <Appbtn
+              onPress={() => {
+                this.props.navigation.navigate('Signup');
+              }}
+              title={'SignUp'}
+            />
           </View>
           <View style={styles.bottomContainer}></View>
         </View>
