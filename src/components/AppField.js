@@ -19,6 +19,7 @@ export class AppField extends Component {
           placeholder={this.props.placeholder}
           placeholderTextColor={red}
           style={styles.TextInput}
+          secureTextEntry={this.props.secureTextEntry}
         />
       </View>
     );
