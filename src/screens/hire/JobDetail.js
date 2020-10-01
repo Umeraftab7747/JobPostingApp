@@ -1,6 +1,6 @@
 /* eslint-disable react/self-closing-comp */
 import React, {Component} from 'react';
-import {StyleSheet, View, Text, ScrollView} from 'react-native';
+import {StyleSheet, View, Text, ScrollView, ToastAndroid} from 'react-native';
 import {
   widthPercentageToDP as w,
   heightPercentageToDP as h,
@@ -13,6 +13,7 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 export class JobDetail extends Component {
   state = {
     shield: true,
+    bookmark: false,
   };
   render() {
     return (
@@ -90,14 +91,34 @@ export class JobDetail extends Component {
         </View>
         <View style={styles.bottomContainer}>
           <Appbtn title={'APPLY'} />
-          <TouchableOpacity>
-            <Icon
-              reverse
-              name={'bookmarks'}
-              type="ionicon"
-              color={red}
-              size={20}
-            />
+          <TouchableOpacity
+            delayPressIn={0}
+            onPress={() => {
+              this.setState({bookmark: !this.state.bookmark}, () => {
+                if (this.state.bookmark === true) {
+                  ToastAndroid.show('Job Bookmarked', ToastAndroid.SHORT);
+                } else {
+                  ToastAndroid.show('Job Un-Bookmarked', ToastAndroid.SHORT);
+                }
+              });
+            }}>
+            {this.state.bookmark === true ? (
+              <Icon
+                reverse
+                name={'bookmarks'}
+                type="ionicon"
+                color={red}
+                size={20}
+              />
+            ) : (
+              <Icon
+                reverse
+                name={'bookmarks'}
+                type="ionicon"
+                color={Black}
+                size={20}
+              />
+            )}
           </TouchableOpacity>
         </View>
       </View>
