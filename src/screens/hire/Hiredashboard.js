@@ -8,12 +8,59 @@ import {
 import {Black, red, white} from '../color';
 import {Appbtn, AppField, Navheader, Searchbox} from '../../components';
 import {Icon} from 'react-native-elements';
-import {KeyboardAwareScrollView} from '@codler/react-native-keyboard-aware-scroll-view';
-
+import {AnimatedFlatList, AnimationType} from 'flatlist-intro-animations';
 export class Hiredashboard extends Component {
   state = {
     modalVisible: false,
+    data: [
+      {id: 1, name: 'umer'},
+      {id: 2, name: 'umer2'},
+      {id: 3, name: 'umer2'},
+      {id: 4, name: 'umer2'},
+      {id: 5, name: 'umer2'},
+      {id: 6, name: 'umer2'},
+      {id: 7, name: 'umer2'},
+      {id: 8, name: 'umer2'},
+      {id: 9, name: 'umer2'},
+      {id: 99, name: 'umer2'},
+      {id: 11, name: 'umer2'},
+    ],
+    focused: true,
+    shield: true,
   };
+
+  renderItem = (item, index) => (
+    <View style={styles.flatlistCoaniner}>
+      <View style={styles.left}></View>
+      <View style={styles.middle}>
+        <Text style={styles.work}>Plumber</Text>
+        <Text style={styles.discriptin}>
+          Work depend upon the user what he want to do
+        </Text>
+      </View>
+      <View style={styles.right}>
+        <TouchableOpacity
+          delayPressIn={0}
+          onPress={() => this.setState({shield: !this.state.shield})}>
+          {this.state.shield ? (
+            <Icon
+              name={'shield-outline'}
+              type="ionicon"
+              color={red}
+              size={30}
+            />
+          ) : (
+            <Icon
+              name={'shield-checkmark'}
+              type="ionicon"
+              color={red}
+              size={30}
+            />
+          )}
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
   render() {
     return (
       <View style={styles.MainContianer}>
@@ -23,7 +70,17 @@ export class Hiredashboard extends Component {
           </View>
           <Searchbox />
         </View>
-        <View style={styles.middleContainer}></View>
+        <View style={styles.middleContainer}>
+          <View>
+            <AnimatedFlatList
+              data={this.state.data}
+              renderItem={({item}) => this.renderItem(item)}
+              animationType={AnimationType.Fade}
+              animationDuration={1000}
+              focused={this.state.focused}
+            />
+          </View>
+        </View>
         <View style={styles.bottomContainer}></View>
         {/* modal */}
       </View>
@@ -38,13 +95,13 @@ const styles = StyleSheet.create({
   topContainer: {
     // backgroundColor: 'gold',
     width: '100%',
-    height: h('30%'),
+    height: h('16%'),
     alignItems: 'center',
   },
   middleContainer: {
     // backgroundColor: 'dodgerblue',
     width: '100%',
-    height: h('60%'),
+    height: h('73%'),
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -65,5 +122,43 @@ const styles = StyleSheet.create({
     color: white,
     fontSize: h('3%'),
     fontWeight: 'bold',
+  },
+  flatlistCoaniner: {
+    // backgroundColor: 'gold',
+    width: w('90%'),
+    height: h('20%'),
+    marginTop: h('2%'),
+    borderRadius: h('1%'),
+    borderWidth: h('0.2%'),
+    borderColor: red,
+    flexDirection: 'row',
+  },
+  left: {
+    // backgroundColor: 'red',
+    width: '35%',
+    height: h('20%'),
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  middle: {
+    // backgroundColor: 'yellow',
+    width: '50%',
+    height: h('20%'),
+    justifyContent: 'center',
+  },
+  right: {
+    // backgroundColor: 'green',
+    width: '15%',
+    height: h('20%'),
+    paddingTop: h('2%'),
+  },
+  work: {
+    fontSize: h('2.5%'),
+    fontWeight: 'bold',
+    color: Black,
+  },
+  discriptin: {
+    fontSize: h('2%'),
+    color: '#0008',
   },
 });

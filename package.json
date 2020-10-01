@@ -16,6 +16,7 @@
     "@react-navigation/bottom-tabs": "^5.9.1",
     "@react-navigation/native": "^5.7.5",
     "@react-navigation/stack": "^5.9.2",
+    "flatlist-intro-animations": "^1.3.1",
     "react": "16.13.1",
     "react-native": "0.63.3",
     "react-native-elements": "^2.3.2",

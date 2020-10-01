@@ -21,7 +21,7 @@ export const BottomTab = () => {
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({color, size}) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
+            <MaterialCommunityIcons name="apps" color={color} size={size} />
           ),
         }}
       />
