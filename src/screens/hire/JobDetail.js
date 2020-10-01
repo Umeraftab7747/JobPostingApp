@@ -6,8 +6,9 @@ import {
   heightPercentageToDP as h,
 } from 'react-native-responsive-screen';
 import {Black, red, white} from '../color';
-import {Appbtn, AppField, Navheader} from '../../components';
+import {Appbtn, Navheader} from '../../components';
 import {Icon} from 'react-native-elements';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
 export class JobDetail extends Component {
   state = {
@@ -87,7 +88,18 @@ export class JobDetail extends Component {
             </View>
           </ScrollView>
         </View>
-        <View style={styles.bottomContainer}></View>
+        <View style={styles.bottomContainer}>
+          <Appbtn title={'APPLY'} />
+          <TouchableOpacity>
+            <Icon
+              reverse
+              name={'bookmarks'}
+              type="ionicon"
+              color={red}
+              size={20}
+            />
+          </TouchableOpacity>
+        </View>
       </View>
     );
   }
@@ -107,12 +119,16 @@ const styles = StyleSheet.create({
   middleContainer: {
     // backgroundColor: 'dodgerblue',
     width: '100%',
-    height: h('50%'),
+    height: h('52%'),
   },
   bottomContainer: {
-    backgroundColor: 'red',
+    backgroundColor: '#0001',
     width: '100%',
-    height: h('15%'),
+    height: h('10%'),
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    paddingLeft: h('1%'),
+    flexDirection: 'row',
   },
   JobContainer: {
     // backgroundColor: red,
