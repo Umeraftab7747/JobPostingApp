@@ -1,0 +1,1 @@
+export {Hiredashboard} from './Hiredashboard';

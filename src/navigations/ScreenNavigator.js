@@ -7,11 +7,25 @@ import {Signin} from '../screens/welcome';
 import {WelcomeScreen} from '../screens/welcome';
 import {Signup} from '../screens/welcome';
 import {Chose} from '../screens/welcome';
+import {Hiredashboard} from '../screens/hire';
+
+// navigatores
+import {BottomTab} from './BottomTab';
 
 export const ScreenNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="BottomTab"
+          component={BottomTab}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Hiredashboard"
+          component={Hiredashboard}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name="WelcomeScreen"
           component={WelcomeScreen}
