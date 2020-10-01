@@ -108,7 +108,7 @@ export class Hiredashboard extends Component {
   };
 
   renderItem = (item, index) => (
-    <View style={styles.flatlistCoaniner}>
+    <TouchableOpacity delayPressIn={0} style={styles.flatlistCoaniner}>
       <View style={styles.left}>
         <Text style={styles.work}>{item.work}</Text>
         {item.urgent ? (
@@ -148,7 +148,7 @@ export class Hiredashboard extends Component {
           )}
         </TouchableOpacity>
       </View>
-    </View>
+    </TouchableOpacity>
   );
   render() {
     return (
@@ -164,7 +164,7 @@ export class Hiredashboard extends Component {
             <AnimatedFlatList
               data={this.state.data}
               renderItem={({item}) => this.renderItem(item)}
-              animationType={AnimationType.Fade}
+              animationType={AnimationType.SlideFromBottom}
               animationDuration={1000}
               focused={this.state.focused}
             />
@@ -263,7 +263,7 @@ const styles = StyleSheet.create({
     marginTop: h('1%'),
   },
   urgnet: {
-    backgroundColor: 'rgba(235, 28, 45, 0.5)',
+    backgroundColor: 'rgba(235, 28, 45, 0.9)',
     width: '70%',
     height: '20%',
     marginTop: h('3%'),
