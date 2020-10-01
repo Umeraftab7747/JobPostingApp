@@ -6,6 +6,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 // screens
 import {Hiredashboard} from '../screens/hire';
 
+
 const Tab = createBottomTabNavigator();
 
 export const BottomTab = () => {
@@ -26,14 +27,13 @@ export const BottomTab = () => {
         }}
       />
       {/* <Tab.Screen
-        name="Notifications"
-        component={Notifications}
+        name="JobDetail"
+        component={JobDetail}
         options={{
           tabBarLabel: 'Updates',
           tabBarIcon: ({color, size}) => (
             <MaterialCommunityIcons name="bell" color={color} size={size} />
           ),
-          tabBarBadge: 3,
         }}
       /> */}
       {/* <Tab.Screen
