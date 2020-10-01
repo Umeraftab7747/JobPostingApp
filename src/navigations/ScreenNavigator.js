@@ -6,11 +6,17 @@ const Stack = createStackNavigator();
 import {Signin} from '../screens/welcome';
 import {WelcomeScreen} from '../screens/welcome';
 import {Signup} from '../screens/welcome';
+import {Chose} from '../screens/welcome';
 
 export const ScreenNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="Chose"
+          component={Chose}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name="WelcomeScreen"
           component={WelcomeScreen}
