@@ -37,7 +37,12 @@ export class Signin extends Component {
               <Text style={styles.txtpass}>Forgot passowrd!</Text>
             </TouchableOpacity>
 
-            <Appbtn title={'SignIn'} />
+            <Appbtn
+              onPress={() => {
+                this.props.navigation.navigate('Chose');
+              }}
+              title={'SignIn'}
+            />
           </View>
           <View style={styles.bottomContainer}>
             <View style={styles.newaccount}>
@@ -45,10 +50,11 @@ export class Signin extends Component {
                 <Text style={styles.usertxt}>Not a User!</Text>
               </View>
               <TouchableOpacity
-               onPress={() => {
-                this.props.navigation.navigate('Signup');
-              }}
-              delayPressIn={0} style={styles.notuser2}>
+                onPress={() => {
+                  this.props.navigation.navigate('Signup');
+                }}
+                delayPressIn={0}
+                style={styles.notuser2}>
                 <Text style={styles.signuptxt}>SignUp</Text>
               </TouchableOpacity>
             </View>

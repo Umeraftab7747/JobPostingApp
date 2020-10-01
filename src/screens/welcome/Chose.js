@@ -13,14 +13,14 @@ export class Chose extends Component {
     return (
       <View style={styles.MainContianer}>
         <View style={styles.topContainer}>
-          <Text style={styles.header}>Chose an Option</Text>
+          <Text style={styles.header}>CHOSE AN OPTION</Text>
         </View>
         <View style={styles.middleContainer}>
           <TouchableOpacity delayPressIn={0} style={styles.btnContainer}>
             <Text style={styles.txtbtn}>HIRE A PERSON</Text>
           </TouchableOpacity>
           <TouchableOpacity delayPressIn={0} style={styles.btnContainer}>
-            <Text style={styles.txtbtn}>Get Job</Text>
+            <Text style={styles.txtbtn}>GET JOB</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.bottomContainer}></View>
@@ -57,23 +57,23 @@ const styles = StyleSheet.create({
     height: h('20%'),
   },
   header: {
-    color: Black,
+    color: red,
     fontSize: h('4%'),
     fontWeight: 'bold',
   },
   btnContainer: {
-    // backgroundColor: red,
+    backgroundColor: red,
     width: '60%',
     height: h('20%'),
     borderWidth: h('0.3%'),
     borderColor: red,
-    marginTop: h('1%'),
+    marginTop: h('2%'),
     borderRadius: h('1%'),
     justifyContent: 'center',
     alignItems: 'center',
   },
   txtbtn: {
-    color: red,
+    color: white,
     fontSize: h('2.5%'),
     fontWeight: 'bold',
   },
