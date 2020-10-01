@@ -13,20 +13,19 @@ export class Hiredashboard extends Component {
   state = {
     modalVisible: false,
     data: [
-      {id: 1, name: 'umer'},
-      {id: 2, name: 'umer2'},
-      {id: 3, name: 'umer2'},
-      {id: 4, name: 'umer2'},
-      {id: 5, name: 'umer2'},
-      {id: 6, name: 'umer2'},
-      {id: 7, name: 'umer2'},
-      {id: 8, name: 'umer2'},
-      {id: 9, name: 'umer2'},
-      {id: 99, name: 'umer2'},
-      {id: 11, name: 'umer2'},
+      {id: 1, name: 'umer', shield: true},
+      {id: 2, name: 'umer2', shield: false},
+      {id: 3, name: 'umer2', shield: false},
+      {id: 4, name: 'umer2', shield: true},
+      {id: 5, name: 'umer2', shield: true},
+      {id: 6, name: 'umer2', shield: true},
+      {id: 7, name: 'umer2', shield: true},
+      {id: 8, name: 'umer2', shield: true},
+      {id: 9, name: 'umer2', shield: true},
+      {id: 99, name: 'umer2', shield: true},
+      {id: 11, name: 'umer2', shield: true},
     ],
     focused: true,
-    shield: true,
   };
 
   renderItem = (item, index) => (
@@ -41,17 +40,22 @@ export class Hiredashboard extends Component {
       <View style={styles.right}>
         <TouchableOpacity
           delayPressIn={0}
-          onPress={() => this.setState({shield: !this.state.shield})}>
-          {this.state.shield ? (
-            <Icon
-              name={'shield-outline'}
-              type="ionicon"
-              color={red}
-              size={30}
-            />
+          onPress={() => {
+            this.setState({item: {...item, shield: !item.shield}});
+          }}>
+          {item.shield ? (
+            <>
+              <Icon
+                name={'shield-checkmark'}
+                type="ionicon"
+                color={red}
+                size={30}
+              />
+              <Text style={styles.verified}>Verified</Text>
+            </>
           ) : (
             <Icon
-              name={'shield-checkmark'}
+              name={'shield-outline'}
               type="ionicon"
               color={red}
               size={30}
@@ -151,6 +155,7 @@ const styles = StyleSheet.create({
     width: '15%',
     height: h('20%'),
     paddingTop: h('2%'),
+    alignItems: 'center',
   },
   work: {
     fontSize: h('2.5%'),
@@ -160,5 +165,10 @@ const styles = StyleSheet.create({
   discriptin: {
     fontSize: h('2%'),
     color: '#0008',
+  },
+  verified: {
+    color: red,
+    fontSize: h('2%'),
+    fontWeight: 'bold',
   },
 });
