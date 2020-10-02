@@ -34,7 +34,7 @@ export const BottomtabHire = () => {
           tabBarLabel: 'Add job',
           tabBarIcon: ({color, size}) => (
             <MaterialCommunityIcons
-              name="bookmark-multiple"
+              name="pencil-plus-outline"
               color={color}
               size={size}
             />
