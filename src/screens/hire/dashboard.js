@@ -126,7 +126,7 @@ export class dashboard extends Component {
       <View style={styles.MainContianer}>
         <View style={styles.topContainer}>
           <View style={styles.searchbox}>
-            <Text style={styles.title}>Job Applied</Text>
+            <Text style={styles.title}>Candidate</Text>
           </View>
           <Searchbox />
         </View>

@@ -6,13 +6,14 @@ import {
   heightPercentageToDP as h,
 } from 'react-native-responsive-screen';
 import {Black, red, white} from '../color';
-import {Appbtn, AppField, Navheader} from '../../components';
+import {Appbtn, AppField, Navheader, AppTextField} from '../../components';
 import {Icon} from 'react-native-elements';
 import {KeyboardAwareScrollView} from '@codler/react-native-keyboard-aware-scroll-view';
 
 export class Addjob extends Component {
   state = {
     modalVisible: false,
+    check: '',
   };
   render() {
     return (
@@ -24,9 +25,42 @@ export class Addjob extends Component {
             </View>
           </View>
           <View style={styles.middleContainer}>
-            <AppField placeholder={'Education'} name={'school'} />
-            <AppField placeholder={'Field Category'} name={'ribbon'} />
-            <AppField placeholder={'Year of Experience'} name={'time'} />
+            <AppField placeholder={'Job Title'} name={'briefcase'} />
+            <AppField placeholder={'Work Address'} name={'business'} />
+            <AppField placeholder={'Email'} name={'mail'} />
+            <AppTextField placeholder={'Discription'} name={'clipboard'} />
+            <View style={styles.urgnet}>
+              <TouchableOpacity
+                onPress={() => {
+                  this.setState({check: 'urgent'});
+                }}
+                style={styles.urgentbox}>
+                {this.state.check === 'urgent' ? (
+                  <Icon
+                    name={'checkmark'}
+                    type="ionicon"
+                    color={white}
+                    size={20}
+                  />
+                ) : null}
+                <Text style={styles.urgnttxt}>Urgent</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  this.setState({check: 'noturgent'});
+                }}
+                style={styles.urgentbox}>
+                {this.state.check === 'noturgent' ? (
+                  <Icon
+                    name={'checkmark'}
+                    type="ionicon"
+                    color={white}
+                    size={20}
+                  />
+                ) : null}
+                <Text style={styles.urgnttxt}>not-Urgent</Text>
+              </TouchableOpacity>
+            </View>
           </View>
           <View style={styles.bottomContainer}>
             <Appbtn title={'Submit'} />
@@ -47,64 +81,22 @@ const styles = StyleSheet.create({
   topContainer: {
     // backgroundColor: 'gold',
     width: '100%',
-    height: h('20%'),
+    height: h('9%'),
   },
   middleContainer: {
     // backgroundColor: 'dodgerblue',
     width: '100%',
-    height: h('60%'),
+    height: h('70%'),
     alignItems: 'center',
     justifyContent: 'center',
   },
   bottomContainer: {
     // backgroundColor: 'red',
     width: '100%',
-    height: h('20%'),
+    height: h('10%'),
     alignItems: 'center',
   },
-  header: {
-    color: Black,
-    fontSize: h('4%'),
-    fontWeight: 'bold',
-  },
-  forgotpass: {
-    // backgroundColor: red,
-    width: '70%',
-    height: '10%',
-    justifyContent: 'center',
-  },
-  txtpass: {
-    color: red,
-    fontWeight: 'bold',
-    fontSize: h('2.3%'),
-  },
-  newaccount: {
-    // backgroundColor: red,
-    width: w('55%'),
-    flexDirection: 'row',
-    justifyContent: 'center',
-    height: h('5%'),
-  },
-  notuser: {
-    // backgroundColor: white,
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '50%',
-  },
-  usertxt: {
-    fontSize: h('2%'),
-  },
-  signuptxt: {
-    fontWeight: 'bold',
-    fontSize: h('2.4%'),
-    color: red,
-  },
-  notuser2: {
-    // backgroundColor: white,
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '30%',
-  },
+
   searchbox: {
     backgroundColor: red,
     width: '100%',
@@ -115,6 +107,28 @@ const styles = StyleSheet.create({
   title: {
     color: white,
     fontSize: h('3%'),
+    fontWeight: 'bold',
+  },
+  urgnet: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    width: '80%',
+    height: h('6%'),
+    // backgroundColor: 'gold',
+    alignItems: 'center',
+  },
+  urgentbox: {
+    backgroundColor: red,
+    width: '40%',
+    height: h('6%'),
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    borderRadius: h('1%'),
+    flexDirection: 'row',
+  },
+  urgnttxt: {
+    color: white,
+    fontSize: h('2%'),
     fontWeight: 'bold',
   },
 });

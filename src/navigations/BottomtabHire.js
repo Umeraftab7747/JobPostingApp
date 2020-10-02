@@ -21,9 +21,9 @@ export const BottomtabHire = () => {
         name="dashboard"
         component={dashboard}
         options={{
-          tabBarLabel: 'Home',
+          tabBarLabel: 'Candidate',
           tabBarIcon: ({color, size}) => (
-            <MaterialCommunityIcons name="apps" color={color} size={size} />
+            <Ionicons name="people-outline" color={color} size={size} />
           ),
         }}
       />
