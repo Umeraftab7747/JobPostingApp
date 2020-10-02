@@ -6,6 +6,7 @@ import {
   Text,
   TouchableOpacity,
   ImageBackground,
+  ToastAndroid,
 } from 'react-native';
 import {
   widthPercentageToDP as w,
@@ -16,6 +17,7 @@ import {Appbtn, AppField, Navheader, Searchbox} from '../../components';
 import {Icon} from 'react-native-elements';
 
 export class CanditateProfile extends Component {
+  state = {bookmark: false};
   render() {
     return (
       <View style={styles.Container}>
@@ -95,6 +97,41 @@ export class CanditateProfile extends Component {
             {/* detail containerend */}
             <View style={styles.hirebtn}>
               <Appbtn title={'HIRE'} />
+              <TouchableOpacity
+                delayPressIn={0}
+                onPress={() => {
+                  this.setState({bookmark: !this.state.bookmark}, () => {
+                    if (this.state.bookmark === true) {
+                      ToastAndroid.show(
+                        'Candidate Bookmarked',
+                        ToastAndroid.SHORT,
+                      );
+                    } else {
+                      ToastAndroid.show(
+                        'Candidate Un-Bookmarked',
+                        ToastAndroid.SHORT,
+                      );
+                    }
+                  });
+                }}>
+                {this.state.bookmark === true ? (
+                  <Icon
+                    reverse
+                    name={'bookmarks'}
+                    type="ionicon"
+                    color={red}
+                    size={20}
+                  />
+                ) : (
+                  <Icon
+                    reverse
+                    name={'bookmarks'}
+                    type="ionicon"
+                    color={Black}
+                    size={20}
+                  />
+                )}
+              </TouchableOpacity>
             </View>
           </View>
         </View>
@@ -194,7 +231,8 @@ const styles = StyleSheet.create({
     // backgroundColor: red,
     width: '100%',
     height: h('9%'),
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
+    flexDirection: 'row',
   },
 });
