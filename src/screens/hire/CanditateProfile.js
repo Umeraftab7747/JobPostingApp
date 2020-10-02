@@ -43,11 +43,7 @@ export class CanditateProfile extends Component {
         <View style={styles.middle}>
           <ImageBackground
             source={require('../../assets/pro.jpg')}
-            style={styles.circle}>
-            <TouchableOpacity style={styles.camerabtn}>
-              <Icon name={'camera'} type="ionicon" color={white} size={35} />
-            </TouchableOpacity>
-          </ImageBackground>
+            style={styles.circle}></ImageBackground>
           <Text style={styles.name}>UMER AFTAB</Text>
           <Text style={styles.email}>UmerAftab7747@gmail.com</Text>
 

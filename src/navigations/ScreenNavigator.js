@@ -16,11 +16,17 @@ import {CanditateProfile} from '../screens/hire';
 // navigatores
 import {BottomTab} from './BottomTab';
 import {BottomtabHire} from './BottomtabHire';
+import {SplashScreen} from '../screens/SplashScreen';
 
 export const ScreenNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="SplashScreen"
+          component={SplashScreen}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name="BottomtabHire"
           component={BottomtabHire}
