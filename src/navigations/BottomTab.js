@@ -6,6 +6,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 // screens
 import {Hiredashboard} from '../screens/hire';
 import {Bookmark} from '../screens/hire';
+import {Profile} from '../screens/hire';
 
 const Tab = createBottomTabNavigator();
 
@@ -40,7 +41,7 @@ export const BottomTab = () => {
           ),
         }}
       />
-      {/* <Tab.Screen
+      <Tab.Screen
         name="Profile"
         component={Profile}
         options={{
@@ -49,7 +50,7 @@ export const BottomTab = () => {
             <MaterialCommunityIcons name="account" color={color} size={size} />
           ),
         }}
-      /> */}
+      />
     </Tab.Navigator>
   );
 };
