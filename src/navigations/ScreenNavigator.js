@@ -7,9 +7,9 @@ import {Signin} from '../screens/welcome';
 import {WelcomeScreen} from '../screens/welcome';
 import {Signup} from '../screens/welcome';
 import {Chose} from '../screens/welcome';
-import {Hiredashboard} from '../screens/hire';
-import {JobDetail} from '../screens/hire';
-import {ProfileDiscription} from '../screens/hire';
+import {Hiredashboard} from '../screens/job';
+import {JobDetail} from '../screens/job';
+import {ProfileDiscription} from '../screens/job';
 
 // navigatores
 import {BottomTab} from './BottomTab';
@@ -18,6 +18,11 @@ export const ScreenNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="WelcomeScreen"
+          component={WelcomeScreen}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name="BottomTab"
           component={BottomTab}
@@ -39,11 +44,7 @@ export const ScreenNavigator = () => {
           component={Hiredashboard}
           options={{headerShown: false}}
         />
-        <Stack.Screen
-          name="WelcomeScreen"
-          component={WelcomeScreen}
-          options={{headerShown: false}}
-        />
+
         <Stack.Screen
           name="Chose"
           component={Chose}

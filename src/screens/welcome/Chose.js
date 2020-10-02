@@ -19,7 +19,12 @@ export class Chose extends Component {
           <TouchableOpacity delayPressIn={0} style={styles.btnContainer}>
             <Text style={styles.txtbtn}>HIRE A PERSON</Text>
           </TouchableOpacity>
-          <TouchableOpacity delayPressIn={0} style={styles.btnContainer}>
+          <TouchableOpacity
+            onPress={() => {
+              this.props.navigation.replace('BottomTab');
+            }}
+            delayPressIn={0}
+            style={styles.btnContainer}>
             <Text style={styles.txtbtn}>GET JOB</Text>
           </TouchableOpacity>
         </View>

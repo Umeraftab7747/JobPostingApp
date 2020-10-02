@@ -140,7 +140,12 @@ export class Settings extends Component {
 
           {/* start container 2 */}
           {/* start Container1 */}
-          <TouchableOpacity style={styles.SettingContainer}>
+          <TouchableOpacity
+            delayPressIn={0}
+            onPress={() => {
+              this.props.navigation.replace('Chose');
+            }}
+            style={styles.SettingContainer}>
             <View style={styles.srightContainer}>
               <Icon
                 name={'rocket-outline'}
@@ -157,7 +162,12 @@ export class Settings extends Component {
 
           {/* start container 2 */}
           {/* start Container1 */}
-          <TouchableOpacity style={styles.SettingContainer}>
+          <TouchableOpacity
+            delayPressIn={0}
+            onPress={() => {
+              this.props.navigation.replace('WelcomeScreen');
+            }}
+            style={styles.SettingContainer}>
             <View style={styles.srightContainer}>
               <Icon
                 name={'exit-outline'}

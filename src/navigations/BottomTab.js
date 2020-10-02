@@ -5,10 +5,10 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 // screens
-import {Hiredashboard} from '../screens/hire';
-import {Bookmark} from '../screens/hire';
-import {Profile} from '../screens/hire';
-import {Settings} from '../screens/hire';
+import {Hiredashboard} from '../screens/job';
+import {Bookmark} from '../screens/job';
+import {Profile} from '../screens/job';
+import {Settings} from '../screens/job';
 
 const Tab = createBottomTabNavigator();
 
