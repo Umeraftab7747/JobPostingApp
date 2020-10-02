@@ -29,7 +29,15 @@ export class Profile extends Component {
           </View>
         </ImageBackground>
         <View style={styles.middle}>
-          <View style={styles.circle}></View>
+          <ImageBackground
+            source={require('../../assets/pro.jpg')}
+            style={styles.circle}>
+            <TouchableOpacity style={styles.camerabtn}>
+              <Icon name={'camera'} type="ionicon" color={white} size={35} />
+            </TouchableOpacity>
+          </ImageBackground>
+          <Text style={styles.name}>UMER AFTAB</Text>
+          <Text style={styles.email}>Umer7747@gmail.com</Text>
         </View>
       </View>
     );
@@ -68,6 +76,25 @@ const styles = StyleSheet.create({
     borderRadius: 1000,
     backgroundColor: white,
     marginTop: -h('12%'),
-    elevation: 6,
+    elevation: 10,
+    overflow: 'hidden',
+    justifyContent: 'flex-end',
+  },
+  camerabtn: {
+    backgroundColor: '#0008',
+    width: '100%',
+    height: h('10%'),
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  name: {
+    color: red,
+    fontSize: h('2.5%'),
+    fontWeight: 'bold',
+    marginTop: h('2%'),
+  },
+  email: {
+    color: Black,
+    fontSize: h('2%'),
   },
 });
