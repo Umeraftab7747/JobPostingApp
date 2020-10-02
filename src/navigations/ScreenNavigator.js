@@ -14,11 +14,17 @@ import {dashboard} from '../screens/hire';
 
 // navigatores
 import {BottomTab} from './BottomTab';
+import {BottomtabHire} from './BottomtabHire';
 
 export const ScreenNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="BottomtabHire"
+          component={BottomtabHire}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name="dashboard"
           component={dashboard}
