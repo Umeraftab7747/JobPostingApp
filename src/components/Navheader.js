@@ -12,7 +12,7 @@ export class Navheader extends Component {
   render() {
     return (
       <View style={styles.Container}>
-        <TouchableOpacity style={styles.icon}>
+        <TouchableOpacity {...this.props} style={styles.icon}>
           <Icon
             name={'chevron-back-outline'}
             type="ionicon"

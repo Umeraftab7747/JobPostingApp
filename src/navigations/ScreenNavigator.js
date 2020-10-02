@@ -18,13 +18,13 @@ export const ScreenNavigator = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="JobDetail"
-          component={JobDetail}
+          name="BottomTab"
+          component={BottomTab}
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="BottomTab"
-          component={BottomTab}
+          name="JobDetail"
+          component={JobDetail}
           options={{headerShown: false}}
         />
         <Stack.Screen

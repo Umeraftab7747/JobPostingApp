@@ -19,7 +19,12 @@ export class JobDetail extends Component {
     return (
       <View style={styles.MainContianer}>
         <View style={styles.topContainer}>
-          <Navheader txt={'JOB DETAILS'} />
+          <Navheader
+            onPress={() => {
+              this.props.navigation.goBack();
+            }}
+            txt={'JOB DETAILS'}
+          />
           <View style={styles.JobContainer}>
             <View style={styles.bottom}>
               <Text style={styles.jobname}>React native Developer</Text>

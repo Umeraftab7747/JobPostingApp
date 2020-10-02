@@ -108,7 +108,12 @@ export class Hiredashboard extends Component {
   };
 
   renderItem = (item, index) => (
-    <TouchableOpacity delayPressIn={0} style={styles.flatlistCoaniner}>
+    <TouchableOpacity
+      onPress={() => {
+        this.props.navigation.navigate('JobDetail');
+      }}
+      delayPressIn={0}
+      style={styles.flatlistCoaniner}>
       <View style={styles.left}>
         <Text style={styles.work}>{item.work}</Text>
         {item.urgent ? (
