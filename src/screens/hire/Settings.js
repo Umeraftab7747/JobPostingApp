@@ -143,6 +143,23 @@ export class Settings extends Component {
           <TouchableOpacity style={styles.SettingContainer}>
             <View style={styles.srightContainer}>
               <Icon
+                name={'rocket-outline'}
+                type="ionicon"
+                color={red}
+                size={30}
+              />
+            </View>
+            <View style={styles.sMiddleContainer}>
+              <Text style={styles.emailtxt}>SWITCH PROFILE</Text>
+            </View>
+            <View style={styles.sleftContainer}></View>
+          </TouchableOpacity>
+
+          {/* start container 2 */}
+          {/* start Container1 */}
+          <TouchableOpacity style={styles.SettingContainer}>
+            <View style={styles.srightContainer}>
+              <Icon
                 name={'exit-outline'}
                 type="ionicon"
                 color={red}
