@@ -10,6 +10,7 @@ import {Chose} from '../screens/welcome';
 import {Hiredashboard} from '../screens/job';
 import {JobDetail} from '../screens/job';
 import {ProfileDiscription} from '../screens/job';
+import {dashboard} from '../screens/hire';
 
 // navigatores
 import {BottomTab} from './BottomTab';
@@ -18,6 +19,11 @@ export const ScreenNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="dashboard"
+          component={dashboard}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name="WelcomeScreen"
           component={WelcomeScreen}
