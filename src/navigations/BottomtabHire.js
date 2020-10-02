@@ -7,6 +7,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 // screens
 import {dashboard} from '../screens/hire';
 import {Addjob} from '../screens/hire';
+import {Alljobs} from '../screens/hire';
 
 const Tab = createBottomTabNavigator();
 
@@ -41,16 +42,16 @@ export const BottomtabHire = () => {
           ),
         }}
       />
-      {/* <Tab.Screen
-        name="Profile"
-        component={Profile}
+      <Tab.Screen
+        name="Alljobs"
+        component={Alljobs}
         options={{
-          tabBarLabel: 'Profile',
+          tabBarLabel: 'Posted Jobs',
           tabBarIcon: ({color, size}) => (
-            <MaterialCommunityIcons name="account" color={color} size={size} />
+            <MaterialCommunityIcons name="apps" color={color} size={size} />
           ),
         }}
-      /> */}
+      />
       {/* <Tab.Screen
         name="Settings"
         component={Settings}
