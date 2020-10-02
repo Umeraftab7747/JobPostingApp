@@ -54,11 +54,7 @@ export class Bookmark extends Component {
         <Text style={styles.date}>Date: {item.date}</Text>
       </View>
       <View style={styles.right}>
-        <TouchableOpacity
-          delayPressIn={0}
-          onPress={() => {
-            this.setState({item: {...item, shield: !item.shield}});
-          }}>
+        <View>
           {item.shield ? (
             <>
               <Icon
@@ -77,7 +73,7 @@ export class Bookmark extends Component {
               size={30}
             />
           )}
-        </TouchableOpacity>
+        </View>
       </View>
     </TouchableOpacity>
   );
