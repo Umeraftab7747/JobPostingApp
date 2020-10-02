@@ -23,7 +23,12 @@ export class Profile extends Component {
           source={require('../../assets/pbg.jpg')}
           style={styles.top}>
           <View style={styles.top2}>
-            <TouchableOpacity style={styles.topbtn}>
+            <TouchableOpacity
+              delayPressIn={0}
+              onPress={() => {
+                this.props.navigation.navigate('ProfileDiscription');
+              }}
+              style={styles.topbtn}>
               <Icon name={'create'} type="ionicon" color={white} size={35} />
             </TouchableOpacity>
           </View>

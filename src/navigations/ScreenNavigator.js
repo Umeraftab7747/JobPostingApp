@@ -9,6 +9,7 @@ import {Signup} from '../screens/welcome';
 import {Chose} from '../screens/welcome';
 import {Hiredashboard} from '../screens/hire';
 import {JobDetail} from '../screens/hire';
+import {ProfileDiscription} from '../screens/hire';
 
 // navigatores
 import {BottomTab} from './BottomTab';
@@ -23,10 +24,16 @@ export const ScreenNavigator = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen
+          name="ProfileDiscription"
+          component={ProfileDiscription}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
           name="JobDetail"
           component={JobDetail}
           options={{headerShown: false}}
         />
+
         <Stack.Screen
           name="Hiredashboard"
           component={Hiredashboard}
