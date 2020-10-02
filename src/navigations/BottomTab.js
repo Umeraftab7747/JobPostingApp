@@ -2,11 +2,13 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 // screens
 import {Hiredashboard} from '../screens/hire';
 import {Bookmark} from '../screens/hire';
 import {Profile} from '../screens/hire';
+import {Settings} from '../screens/hire';
 
 const Tab = createBottomTabNavigator();
 
@@ -48,6 +50,16 @@ export const BottomTab = () => {
           tabBarLabel: 'Profile',
           tabBarIcon: ({color, size}) => (
             <MaterialCommunityIcons name="account" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Settings"
+        component={Settings}
+        options={{
+          tabBarLabel: 'Settings',
+          tabBarIcon: ({color, size}) => (
+            <Ionicons name="settings" color={color} size={size} />
           ),
         }}
       />
