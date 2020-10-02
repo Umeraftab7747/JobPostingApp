@@ -22,11 +22,6 @@ export const ScreenNavigator = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="CanditateProfile"
-          component={CanditateProfile}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
           name="BottomtabHire"
           component={BottomtabHire}
           options={{headerShown: false}}
@@ -39,6 +34,11 @@ export const ScreenNavigator = () => {
         <Stack.Screen
           name="WelcomeScreen"
           component={WelcomeScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="CanditateProfile"
+          component={CanditateProfile}
           options={{headerShown: false}}
         />
         <Stack.Screen

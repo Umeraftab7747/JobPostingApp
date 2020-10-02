@@ -16,42 +16,40 @@ export class dashboard extends Component {
     data: [
       {
         id: 1,
-        work: 'Ali aslam',
-        shield: true,
+        work: 'Umer Aftab',
 
-        education: '25.7.2020',
-        skill: 'Plumber',
+        education: 'Ms.Computer Science',
+        skill: 'Reac native',
       },
       {
         id: 2,
         work: 'Kashif',
         shield: false,
         urgent: false,
-        education: '25.7.2020',
-        skill: 'React native',
+        education: 'Matric',
+        skill: 'Plumber',
       },
       {
         id: 3,
         work: 'Iqram Azmat',
         shield: false,
         urgent: false,
-        education: '25.7.2020',
+        education: 'Computer Science',
         skill: 'React.js',
       },
       {
         id: 4,
         work: 'Zia-ul-haq',
-        shield: true,
+
         urgent: false,
-        education: '25.7.2020',
+        education: 'Intern',
         skill: 'firebase Developer',
       },
       {
         id: 5,
         work: 'Kashi chye wala',
-        shield: true,
 
-        education: '25.7.2020',
+        education: '5th class',
         skill: 'Wood Cuter',
       },
       {
@@ -59,7 +57,7 @@ export class dashboard extends Component {
         work: 'Umer lakrhar',
         shield: false,
         urgent: false,
-        education: '25.7.2020',
+        education: 'nothing',
         skill: 'Carpanter',
       },
       {
@@ -67,15 +65,14 @@ export class dashboard extends Component {
         work: 'shani Driver',
         shield: false,
         urgent: false,
-        education: '25.7.2020',
+        education: 'no class',
         skill: 'Driver',
       },
       {
         id: 8,
         work: 'Hanzilah Shiek',
-        shield: true,
 
-        education: '25.7.2020',
+        education: 'Mphill Android',
         skill: 'Android developer',
       },
       {
@@ -83,15 +80,14 @@ export class dashboard extends Component {
         work: 'Kami dodi',
         shield: false,
         urgent: false,
-        education: '25.7.2020',
+        education: 'No education',
         skill: 'Express.js',
       },
       {
         id: 99,
         work: 'Asif Aslam',
-        shield: true,
 
-        education: '25.7.2020',
+        education: 'PNY M.i',
         skill: 'backend-Developer',
       },
       {
@@ -99,7 +95,7 @@ export class dashboard extends Component {
         work: 'Jawad raza',
         shield: false,
         urgent: false,
-        education: '25.7.2020',
+        education: 'BSSE',
         skill: 'Reactjs+redux',
       },
     ],
@@ -109,7 +105,7 @@ export class dashboard extends Component {
   renderItem = (item, index) => (
     <TouchableOpacity
       onPress={() => {
-        this.props.navigation.navigate('JobDetail');
+        this.props.navigation.navigate('CanditateProfile');
       }}
       delayPressIn={0}
       style={styles.flatlistCoaniner}>
