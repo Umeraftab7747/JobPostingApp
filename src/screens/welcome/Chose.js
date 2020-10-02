@@ -16,7 +16,12 @@ export class Chose extends Component {
           <Text style={styles.header}>CHOSE AN OPTION</Text>
         </View>
         <View style={styles.middleContainer}>
-          <TouchableOpacity delayPressIn={0} style={styles.btnContainer}>
+          <TouchableOpacity
+            delayPressIn={0}
+            onPress={() => {
+              this.props.navigation.replace('BottomtabHire');
+            }}
+            style={styles.btnContainer}>
             <Text style={styles.txtbtn}>HIRE A PERSON</Text>
           </TouchableOpacity>
           <TouchableOpacity

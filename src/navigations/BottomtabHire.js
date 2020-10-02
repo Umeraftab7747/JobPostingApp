@@ -8,6 +8,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import {dashboard} from '../screens/hire';
 import {Addjob} from '../screens/hire';
 import {Alljobs} from '../screens/hire';
+import {BookmarkedCandidate} from '../screens/hire';
+import {Settings} from '../screens/job';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,7 +26,7 @@ export const BottomtabHire = () => {
         options={{
           tabBarLabel: 'Candidate',
           tabBarIcon: ({color, size}) => (
-            <Ionicons name="people-outline" color={color} size={size} />
+            <Ionicons name="people" color={color} size={size} />
           ),
         }}
       />
@@ -34,11 +36,7 @@ export const BottomtabHire = () => {
         options={{
           tabBarLabel: 'Add job',
           tabBarIcon: ({color, size}) => (
-            <MaterialCommunityIcons
-              name="pencil-plus-outline"
-              color={color}
-              size={size}
-            />
+            <MaterialCommunityIcons name="pencil" color={color} size={size} />
           ),
         }}
       />
@@ -52,7 +50,17 @@ export const BottomtabHire = () => {
           ),
         }}
       />
-      {/* <Tab.Screen
+      <Tab.Screen
+        name="BookmarkedCandidate"
+        component={BookmarkedCandidate}
+        options={{
+          tabBarLabel: 'Bookmarked',
+          tabBarIcon: ({color, size}) => (
+            <Ionicons name="bookmarks" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
         name="Settings"
         component={Settings}
         options={{
@@ -61,7 +69,7 @@ export const BottomtabHire = () => {
             <Ionicons name="settings" color={color} size={size} />
           ),
         }}
-      /> */}
+      />
     </Tab.Navigator>
   );
 };

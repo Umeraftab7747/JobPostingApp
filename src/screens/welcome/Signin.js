@@ -39,7 +39,7 @@ export class Signin extends Component {
 
             <Appbtn
               onPress={() => {
-                this.props.navigation.navigate('Chose');
+                this.props.navigation.replace('Chose');
               }}
               title={'SignIn'}
             />
