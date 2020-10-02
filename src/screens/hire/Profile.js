@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     // backgroundColor: 'gold',
     width: '100%',
     height: h('45%'),
-    paddingTop: h('4%'),
+    paddingTop: h('6.5%'),
   },
   topDetails: {
     // backgroundColor: red,
